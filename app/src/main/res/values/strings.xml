@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="please_try_again_later">Please try again Later</string>
+    <string name="username_epty_error">user name cann\'t be empty</string>
+    <string name="password_empty_error_msg">password cann\'t be empty</string>
+    <string name="something_went_wrong">Something Went Wrong</string>
+    <string name="daily_news">Daily News</string>
+    <string name="back">back</string>
+    <string name="news">News</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="password">password</string>
+</resources>
