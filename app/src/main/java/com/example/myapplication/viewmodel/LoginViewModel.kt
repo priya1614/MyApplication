@@ -9,7 +9,8 @@ import com.example.myapplication.utils.Resource
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
-class LoginViewModel (private val apiHelper: ApiHelper
+class LoginViewModel(
+    private val apiHelper: ApiHelper
 
 ) : ViewModel() {
     private val users = MutableLiveData<Resource<ApiUser>>()
@@ -25,10 +26,11 @@ class LoginViewModel (private val apiHelper: ApiHelper
                 val usersFromApi = apiHelper.getUser()
                 users.postValue(Resource.success(usersFromApi))
             } catch (e: Exception) {
-                users.postValue(Resource.error("something went wrong",null))
+                users.postValue(Resource.error("something went wrong", null))
             }
         }
     }
+
     fun getUsers(): LiveData<Resource<ApiUser>> {
         return users
     }

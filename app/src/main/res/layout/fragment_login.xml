@@ -9,11 +9,22 @@
     android:layout_marginEnd="20dp"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome Back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="50dp"
+        android:textSize="28sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"/>
+
     <EditText
         android:id="@+id/input_email"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_marginTop="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:autofillHints="email"
         android:background="@drawable/style"
         android:defaultFocusHighlightEnabled="true"
@@ -33,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="25dp"
-        android:autofillHints="password"
+        android:autofillHints="Password"
         android:background="@drawable/style"
         android:defaultFocusHighlightEnabled="true"
         android:hint="@string/password"
@@ -50,17 +61,19 @@
     <Button
 
         android:id="@+id/btn_login"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/style"
         android:backgroundTint="#000000"
         android:clickable="true"
+        android:textAllCaps="false"
         android:padding="12dp"
-        android:text="login"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/log_in"
         android:textColor="@android:color/white"
-        android:textSize="15sp"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/input_password" />

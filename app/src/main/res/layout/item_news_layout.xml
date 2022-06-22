@@ -49,16 +49,6 @@
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <!--                <ProgressBar-->
-                <!--                    android:id="@+id/prograss_load_photo"-->
-                <!--                    style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="70dp"-->
-                <!--                    app:layout_constraintBottom_toBottomOf="parent"-->
-                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
-                <!--                    app:layout_constraintStart_toStartOf="parent"-->
-                <!--                    app:layout_constraintTop_toTopOf="parent" />-->
                 <TextView
                     android:id="@+id/title"
                     android:layout_width="match_parent"
@@ -66,87 +56,36 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="16dp"
+                    android:layout_marginBottom="10dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@{newsData.title}"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_marginBottom="10dp"
                     app:layout_constraintTop_toBottomOf="@+id/img" />
 
                 <TextView
                     android:id="@+id/author"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
-                    android:layout_marginBottom="6dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="6dp"
                     android:fontFamily="sans-serif-black"
                     android:text="@{newsData.author}"
                     android:textColor="@android:color/black"
                     android:textSize="16sp"
-                    app:layout_constraintTop_toBottomOf="@+id/title"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/title" />
+                    app:layout_constraintStart_toStartOf="@+id/title"
+                    app:layout_constraintTop_toBottomOf="@+id/title" />
 
-                <!--                <FrameLayout-->
-                <!--                    android:id="@+id/layoutDate"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginTop="-50dp"-->
-                <!--                    android:layout_marginEnd="20dp"-->
-                <!--                    android:padding="5dp"-->
-                <!--                    app:layout_constraintEnd_toEndOf="parent"-->
-                <!--                    app:layout_constraintTop_toTopOf="parent">-->
-
-                <!--                    <ImageView-->
-                <!--                        android:layout_width="18dp"-->
-                <!--                        android:layout_height="13dp"-->
-                <!--                        android:layout_marginLeft="5dp"-->
-                <!--                        android:layout_marginRight="5dp" />-->
-
-                <!--                    <TextView-->
-                <!--                        android:id="@+id/publishedAt"-->
-                <!--                        android:layout_width="wrap_content"-->
-                <!--                        android:layout_height="wrap_content"-->
-                <!--                        android:layout_marginStart="27dp"-->
-                <!--                        android:layout_marginEnd="10dp"-->
-                <!--                        android:text="@{newsData.publishedAt}"-->
-                <!--                        android:textColor="@color/black" />-->
-
-                <!--                </FrameLayout>-->
-
-
-
-
-
-                <!--                <TextView-->
-                <!--                    android:id="@+id/desc"-->
-                <!--                    android:layout_width="match_parent"-->
-                <!--                    android:layout_height="wrap_content"-->
-                <!--                    android:layout_marginLeft="16dp"-->
-                <!--                    android:layout_marginTop="5dp"-->
-                <!--                    android:layout_marginRight="16dp"-->
-                <!--                    android:fontFamily="sans-serif-black"-->
-                <!--                    android:text="@{newsData.description}"-->
-                <!--                    android:textSize="16sp"-->
-                <!--                    app:layout_constraintTop_toBottomOf="@+id/title" />-->
-
-
-
-
-                <!--                <TextView-->
-                <!--                    android:id="@+id/time"-->
-                <!--                    android:layout_width="wrap_content"-->
-                <!--                    android:layout_height="20dp"-->
-                <!--                    android:layout_marginTop="10dp"-->
-                <!--                    android:layout_marginBottom="10dp"-->
-                <!--                    android:drawablePadding="10dp"-->
-                <!--                    android:ellipsize="end"-->
-                <!--                    android:maxLines="1"-->
-                <!--                    android:singleLine="true"-->
-                <!--                    android:text="Time"-->
-                <!--                    app:layout_constraintEnd_toEndOf="@+id/source"-->
-                <!--                    app:layout_constraintTop_toBottomOf="@+id/desc" />-->
+                <ImageView
+                    android:id="@+id/like_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="5dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/author" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

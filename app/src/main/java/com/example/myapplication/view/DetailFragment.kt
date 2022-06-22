@@ -12,15 +12,17 @@ import com.example.myapplication.data.model.NewsArticles
 import com.example.myapplication.databinding.FragmentDetailBinding
 import com.example.myapplication.utils.DateUtils
 
-class DetailFragment(news: NewsArticles) : BaseFragment() {
+class DetailFragment(news: NewsArticles,liked:Boolean) : BaseFragment() {
     override fun layoutId(): Int = R.layout.fragment_detail
 
 
     private lateinit var binding: FragmentDetailBinding
     private var news: NewsArticles? = null
+    private var liked :Boolean
 
     init {
         this.news = news
+        this.liked = liked
     }
 
     override fun onCreateView(
@@ -85,7 +87,14 @@ class DetailFragment(news: NewsArticles) : BaseFragment() {
                 it.content.visibility = View.GONE
             }
             it.progressBar.visibility = View.GONE
+            if(liked)
+            it.likeButton.setImageDrawable(context?.getDrawable(R.drawable.ic_baseline_thumb_up_alt_24))
+            else{
+                it.likeButton.setImageDrawable(context?.getDrawable(R.drawable.ic_baseline_thumb_up_alt_gray))
+            }
+
         }
+
 
     }
 
@@ -95,6 +104,14 @@ class DetailFragment(news: NewsArticles) : BaseFragment() {
             transaction?.remove(this)
             transaction?.commit()
         }
+        binding.likeButton.setOnClickListener {
+            if (!liked) {
+                binding.likeButton.setImageDrawable(context?.getDrawable(R.drawable.ic_baseline_thumb_up_alt_24))
+                liked = true
+            } else {
+                binding.likeButton.setImageDrawable(context?.getDrawable(R.drawable.ic_baseline_thumb_up_alt_gray))
+                liked = false
+            }
+        }
     }
-
 }

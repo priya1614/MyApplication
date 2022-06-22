@@ -12,11 +12,4 @@ interface ApiService {
     @GET("/0774724810730d4ee184")
     suspend fun getUser() : ApiUser
 
-
-//    @GET("articles")
-//    suspend fun getUsers(): List<ApiUser>
-
-    //  https://s3-ap-southeast-1.amazonaws.com/he-public-data/placesofinterest39c1c48.json
-    //  https://demo.ezetap.com/mobileapps/android_assignment.json
-
 }

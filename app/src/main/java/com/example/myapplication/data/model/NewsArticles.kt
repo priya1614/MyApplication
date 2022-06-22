@@ -21,7 +21,9 @@ data class NewsArticles(
     @SerializedName("source")
     val source :Source,
     @SerializedName("urlToImage")
-    val imageUrl :String = ""
+    val imageUrl :String = "",
+
+    var isSelected: Boolean = false
 
 )
 

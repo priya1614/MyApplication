@@ -1,7 +1,6 @@
 package com.example.myapplication.viewmodel
 
 
-
 import android.content.ContentValues
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -38,6 +37,7 @@ class DashBoardViewModel(
             }
         }
     }
+
     fun getUsers(): LiveData<Resource<List<NewsArticles>>> {
         return users
     }

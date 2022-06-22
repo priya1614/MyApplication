@@ -13,8 +13,7 @@ class MainActivity : BaseActivity() {
         setUpFragment()
     }
 
-    private fun setUpFragment()
-    {
+    private fun setUpFragment() {
         val fragmentHome = LoginFragment()
         pushFragment(
             R.id.parent_container,
